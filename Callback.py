@@ -1,6 +1,7 @@
 
 import tensorflow as tf
 
+#Create the callback class and method that will be call when the model training is happening
 class myCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
     if(logs.get('acc')>0.6):
